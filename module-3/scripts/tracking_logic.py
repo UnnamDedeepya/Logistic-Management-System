@@ -1,10 +1,18 @@
+import random
+import time
+
+def fetch_real_gps_data():
+    # Simulate fetching real GPS data (replace with actual API call)
+    return {
+        "latitude": round(random.uniform(-90, 90), 6),
+        "longitude": round(random.uniform(-180, 180), 6)
+    }
+
 def track_shipment(gps_data):
-    # Placeholder for shipment tracking logic
-    print(f"Tracking shipment at location: {gps_data}")
+    print(f"Tracking shipment at location: Latitude {gps_data['latitude']}, Longitude {gps_data['longitude']}")
 
 if __name__ == "__main__":
-    import gps_simulation  # Ensure you simulate GPS data first
     while True:
-        gps_data = gps_simulation.generate_gps_data()
+        gps_data = fetch_real_gps_data()
         track_shipment(gps_data)
-        time.sleep(5)  # Adjust as needed
+        time.sleep(5)  # Adjust the sleep time as needed
