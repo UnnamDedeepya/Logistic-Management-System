@@ -17,8 +17,9 @@ def visualize_route(start_coords, end_coords):
     print("Map has been saved as route_map.html")
 
 if __name__ == "__main__":
-    # Example coordinates (latitude, longitude)
-    start_coordinates = (37.7749, -122.4194)  # San Francisco
-    end_coordinates = (34.0522, -118.2437)    # Los Angeles
-    
-    visualize_route(start_coordinates, end_coordinates)
+    start_lat = float(input("Enter starting latitude: "))
+    start_lon = float(input("Enter starting longitude: "))
+    end_lat = float(input("Enter ending latitude: "))
+    end_lon = float(input("Enter ending longitude: "))
+
+    visualize_route((start_lat, start_lon), (end_lat, end_lon))

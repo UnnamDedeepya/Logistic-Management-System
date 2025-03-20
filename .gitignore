@@ -1,5 +1,10 @@
 __pycache__/ 
 .env 
 venv/ 
-*.csv 
+# Ignore all CSV files by default
+*.csv
+
+# Allow gps_log.csv to be tracked
+!module-3/data/gps_log.csv
+
 *.json 
